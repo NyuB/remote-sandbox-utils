@@ -14,6 +14,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 echo "    Adding current user to docker group (you may need to reboot or refresh groups' statuses to use docker without sudo)"
 sudo groupadd docker
+sudo usermod -aG docker $USER
 
 echo "    Enabling docker daemon to run on boot"
 sudo systemctl enable docker.service
